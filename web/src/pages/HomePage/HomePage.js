@@ -1,8 +1,17 @@
+import MonacoEditor from 'react-monaco-editor'
+
 const HomePage = () => {
   return (
     <div>
       <h1>HomePage</h1>
-      <p>Find me in ./web/src/pages/HomePage/HomePage.js</p>
+      <MonacoEditor
+        width="800px"
+        height="600px"
+        language="json"
+        theme="vs-dark"
+        value={JSON.stringify({a: 1, b: 2}, null, '  ')}
+        options={{}}
+      />
     </div>
   )
 }
